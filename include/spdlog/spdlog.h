@@ -152,6 +152,7 @@ inline void debug(format_string_t<Args...> fmt, Args &&... args)
 }
 
 template<typename... Args>
+//fmt为string 里面的{}可以被后面的args填充
 inline void info(format_string_t<Args...> fmt, Args &&... args)
 {
     default_logger_raw()->info(fmt, std::forward<Args>(args)...);
